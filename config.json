@@ -1,20 +1,20 @@
 {
     "obs": {
-        "ip": "localhost:4444",
+        "ip": "host.docker.internal:4444",
         "password": "password",
-        "normalScene": "Screen",
-        "offlineScene": "BRB",
-        "lowBitrateScene": "lowbitratedetected",
-        "refreshScene": "REFRESH",
+        "normalScene": "Media",
+        "offlineScene": "OFFLINE",
+        "lowBitrateScene": "BRB",
+        "refreshScene": "BRB",
         "lowBitrateTrigger": 1000,
         "highRttTrigger": 2500,
         "refreshSceneInterval": 10000,
         "requestMs": 2000,
-        "onlySwitchWhenStreaming": true
+        "onlySwitchWhenStreaming": false
     },
     "rtmp": {
         "server": "nginx",
-        "stats": "http://localhost/stat",
+        "stats": "http://host.docker.internal/stat",
         "application": "publish",
         "key": "live"
     },
@@ -22,7 +22,7 @@
         "channel": "715209",
         "botUsername": "715209",
         "oauth": "oauth:YOUR_OAUTH_HERE",
-        "enable": true,
+        "enable": false,
         "prefix": "!",
         "enablePublicCommands": false,
         "publicCommands": ["bitrate"],
@@ -31,7 +31,11 @@
         "enableAutoSwitchNotification": true,
         "enableAutoStopStreamOnHostOrRaid": true,
         "adminUsers": ["715209", "b3ck"],
-        "alias": [["r", "refresh"], ["f", "fix"], ["b", "bitrate"]]
+        "alias": [
+            ["r", "refresh"],
+            ["f", "fix"],
+            ["b", "bitrate"]
+        ]
     },
     "language": "en"
 }
