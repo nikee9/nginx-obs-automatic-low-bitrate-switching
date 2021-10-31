@@ -1,0 +1,41 @@
+{
+    "obs": {
+        "ip": "host.docker.internal:4444",
+        "password": "password",
+        "normalScene": "Media",
+        "offlineScene": "OFFLINE",
+        "lowBitrateScene": "BRB",
+        "refreshScene": "BRB",
+        "lowBitrateTrigger": 1000,
+        "highRttTrigger": 2500,
+        "refreshSceneInterval": 10000,
+        "requestMs": 2000,
+        "onlySwitchWhenStreaming": false
+    },
+    "rtmp": {
+        "server": "nginx",
+        "stats": "http://host.docker.internal/stat",
+        "application": "publish",
+        "key": "live"
+    },
+    "twitchChat": {
+        "channel": "715209",
+        "botUsername": "715209",
+        "oauth": "oauth:YOUR_OAUTH_HERE",
+        "enable": false,
+        "prefix": "!",
+        "enablePublicCommands": false,
+        "publicCommands": ["bitrate"],
+        "enableModCommands": false,
+        "modCommands": ["refresh", "fix", "trigger", "sourceinfo", "obsinfo"],
+        "enableAutoSwitchNotification": true,
+        "enableAutoStopStreamOnHostOrRaid": true,
+        "adminUsers": ["715209", "b3ck"],
+        "alias": [
+            ["r", "refresh"],
+            ["f", "fix"],
+            ["b", "bitrate"]
+        ]
+    },
+    "language": "en"
+}
